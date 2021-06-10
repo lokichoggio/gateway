@@ -1,0 +1,25 @@
+Name: gateway-api
+Host: 0.0.0.0
+Port: 8030
+
+Add:
+  Etcd:
+    Hosts:
+      - localhost:2379
+    Key: add.rpc
+
+Check:
+  Etcd:
+    Hosts:
+      - localhost:2379
+    Key: check.rpc
+
+Log:
+  Mode: file
+  KeepDays: 3
+  Level: info
+
+Prometheus:
+  Host: 127.0.0.1
+  Port: 8031
+  Path: /metrics
